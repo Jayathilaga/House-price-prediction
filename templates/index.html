@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>  
+<meta charset="UTF-8">  
+<title>Tree Type Prediction</title>  
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  </head>  
+<body background="https://lh5.googleusercontent.com/proxy/4vbIAzfLtz2eDbQMOoU-AIu5sDST-dHmm9vaxN3VQyBjjH11o4VUWF4QEQfIO8oZ4a5Zy1lXDGSKWlIrDnokEATdPiNz4ho4beHMDhCPltozmdnc5Cac69cVH3WvIUJEF7M=s0-d">
+<div class="login"> 
+    <h1 style="text-align:center">House Price Prediction</h1> 
+    <form action="{{ url_for('predict')}}"method="post"> 
+    <h3 style="text-align:center;">ml_num</h3> 
+    <p style="text-align:center;"><input type="text" name="ml_num" value="N3613770" required="required" /></p> 
+    <h3 style="text-align:center;">property_type</h3> 
+    <p style="text-align:center;"><input type="text" name="property_type" value="A." required="required" /></p> 
+    <h3 style="text-align:center;">br</h3>        
+    <p style="text-align:center;"><input type="number" name="br"  value="4.0" required="required" /></p>  
+   <h3 style="text-align:center;">br_plus</h3> 
+   <p style="text-align:center;"><input type="number" name="br_plus" value="0" required="required" /></p>  
+    <h3 style="text-align:center;">br_final</h3>        
+    <p style="text-align:center;"><input type="number" name="br_final" value="4.0" required="required" /></p>  
+   <h3 style="text-align:center;">bath_tot</h3> 
+   <p style="text-align:center;"><input type="number" name="bath_tot" value="3" required="required" /></p>
+    <h3 style="text-align:center;">taxes</h3>        
+    <p style="text-align:center;"><input type="number" name="taxes" value="0.0" required="required" /></p>  
+   <h3 style="text-align:center;">lp_dol</h3> 
+   <p style="text-align:center;"><input type="number" name="lp_dol" value="406400" required="required" /></p>
+   <h3 style="text-align:center;">yr_built</h3> 
+    <p style="text-align:center;"><input type="text" name="yr_built" value="New" required="required" /></p> 
+    <h3 style="text-align:center;">gar_type</h3> 
+    <p style="text-align:center;"><input type="text" name="gar_type" value="Attached" required="required" /></p>
+       <h3 style="text-align:center;">garage</h3>        
+    <p style="text-align:center;"><input type="number" name="garage"  value="1.0" required="required" /></p>  
+   <h3 style="text-align:center;">topHighschoolScore</h3> 
+   <p style="text-align:center;"><input type="number" name="topHighschoolScore" value="0.0" required="required" /></p>  
+    <h3 style="text-align:center;">topBelowHighschoolScore</h3>        
+    <p style="text-align:center;"><input type="number" name="topBelowHighschoolScore" value="5.0"  required="required" /></p>  
+   <h3 style="text-align:center;">geo_latitude</h3> 
+   <p style="text-align:center;"><input type="number" name="geo_latitude" value="44.316996" required="required" /></p>
+    <h3 style="text-align:center;">geo_longitude</h3>        
+    <p style="text-align:center;"><input type="number" name="geo_longitude" value="-79.857459"  required="required" /></p>  
+   <h3 style="text-align:center;">lot_frontfeet</h3> 
+   <p style="text-align:center;"><input type="number" name="lot_frontfeet" value="30.02" required="required" /></p>
+   <h3 style="text-align:center;">lot_depthfeet</h3> 
+    <p style="text-align:center;"><input type="text" name="lot_depthfeet" value="117.29" required="required" /></p> 
+   <h3 style="text-align:center;">sqft_numeric</h3> 
+   <p style="text-align:center;"><input type="number" name="sqft_numeric" value="1750" required="required" /></p>
+    <h3 style="text-align:center;">id_community</h3>        
+    <p style="text-align:center;"><input type="number" name="id_community" value="232" required="required" /></p>  
+   <h3 style="text-align:center;">id_municipality</h3> 
+   <p style="text-align:center;"><input type="number" name="id_municipality" value="10103" required="required" /></p>
+   <h3 style="text-align:center;">lot_size</h3> 
+    <p style="text-align:center;"><input type="text" name="lot_size" value="3521.0458"  required="required" /></p> 
+    <h3 style="text-align:center;">date_start</h3> 
+    <p style="text-align:center;"><input type="text" name="date_start" value="2016-09-25 00:00:00" required="required" /></p> 
+    <h3 style="text-align:center;">date_end</h3> 
+    <p style="text-align:center;"><input type="text" name="date_end" value="2016-10-03 00:00:00" required="required" /></p> 
+        
+   <h2 style="text-align:center;"></h2>         
+   <p style="text-align:center;"><button type="submit" class="btn btn-primary btn-block btn-large">Predict house Price</button></p>  
+  </form> <h2 style="text-align:center;">{{ prediction_text }}</h2>
+</div>
+</body>
+</html>
