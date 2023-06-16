@@ -4,6 +4,6 @@
 3. As there were many features created I had used Ridge reg as we could drop some features.
 
 **Interpretation:** 
-1. Increasing lp_dol by 1 scaled unit increases the predicted price by $\sim\$468780$.
-2. If you change the category from property_type_A. to property_type_C. the prediction price goes down by $\sim\$31467$
-2. If you change the category from property_type_A. to property_type_D. the prediction price goes down by $\sim\$23935$
+1. Increasing lp_dol by 1 scaled unit increases the predicted price by ~468780$.
+2. If you change the category from property_type_A. to property_type_C. the prediction price goes down by ~31467$
+2. If you change the category from property_type_A. to property_type_D. the prediction price goes down by ~23935$
